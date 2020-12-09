@@ -9,30 +9,51 @@ import {
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Main = styled.div`
+  flex-grow: 1;
+  overflow: auto;
+`;
+
+const Nav = styled.nav`
+  border: 1px solid blue;
+  > ul{
+  display:flex;
+    > li{
+      width: 33.3333%;
+      text-align: center;
+      padding: 16px;
+      }
+  }
 `;
 
 function App() {
   return (
     <Router>
       <Wrapper>
-        <Switch>
-          <Route path="/tags">
-            <Tags/>
-          </Route>
-          <Route path="/money">
-            <Money/>
-          </Route>
-          <Route path="/statistics">
-            <Statistics/>
-          </Route>
-          <Redirect exact from="/" to="money"/>
-          <Route path="*">
-            <NoMatch/>
-          </Route>
-        </Switch>
+        <Main>
+          <Switch>
+            <Route path="/tags">
+              <Tags/>
+            </Route>
+            <Route path="/money">
+              <Money/>
+            </Route>
+            <Route path="/statistics">
+              <Statistics/>
+            </Route>
+            <Redirect exact from="/" to="money"/>
+            <Route path="*">
+              <NoMatch/>
+            </Route>
+          </Switch>
+        </Main>
 
-        <nav>
+        <Nav>
           <ul>
             <li>
               <Link to="/tags">标签页</Link>
@@ -44,7 +65,7 @@ function App() {
               <Link to="/statistics">统计页</Link>
             </li>
           </ul>
-        </nav>
+        </Nav>
       </Wrapper>
     </Router>
   );

@@ -1878,7 +1878,7 @@
 
 "@types/styled-components@^5.1.4":
   version "5.1.4"
-  resolved "https://registry.npm.taobao.org/@types/styled-components/download/@types/styled-components-5.1.4.tgz?cache=0&sync_timestamp=1605057448259&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fstyled-components%2Fdownload%2F%40types%2Fstyled-components-5.1.4.tgz#11f167dbde268635c66adc89b5a5db2e69d75384"
+  resolved "https://registry.npm.taobao.org/@types/styled-components/download/@types/styled-components-5.1.4.tgz#11f167dbde268635c66adc89b5a5db2e69d75384"
   integrity sha1-EfFn294mhjXGatyJtaXbLmnXU4Q=
   dependencies:
     "@types/hoist-non-react-statics" "*"
