@@ -18,7 +18,7 @@ const NavWrapper = styled.nav`
         align-items:center;
           .icon{
             width: 24px;
-            height: 24px;c
+            height: 24px;
           }
           &.selected{
             color: red;
