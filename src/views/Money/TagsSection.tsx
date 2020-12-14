@@ -36,12 +36,14 @@ const Wrapper = styled.section`
 const TagsSection: React.FC = () => {
   const [tags, setTags] = useState<string[]>(['衣', '食', '住', '行']);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
   const onAddTag = () => {
     const tagName = window.prompt('新标签的名称为');
     if (tagName !== null) {
       setTags([...tags, tagName]);
     }
   };
+
   const onToggleTag = (tag: string) => {
     const index = selectedTags.indexOf(tag);
     if (index >= 0) {
@@ -50,6 +52,7 @@ const TagsSection: React.FC = () => {
       setSelectedTags([...selectedTags, tag]);
     }
   };
+
   const getClass = (tag: string) => selectedTags.indexOf(tag) >= 0 ? 'selected' : '';
   return (
     <Wrapper>
