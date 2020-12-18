@@ -32,6 +32,7 @@ const useTags = () => {
         break;
       }
     }
+
     return result;
   };
 
@@ -50,7 +51,12 @@ const useTags = () => {
     }
   };
 
-  return {tags, addTag, setTags, findTag, updateTag, findTagIndex, deleteTag};
+  const getName = (id: number) => {
+    const tag = tags.filter(t => t.id === id)[0];
+    return tag ? tag.name : '';
+  };
+
+  return {tags, getName, addTag, setTags, findTag, updateTag, findTagIndex, deleteTag};
 };
 
 export {useTags};
